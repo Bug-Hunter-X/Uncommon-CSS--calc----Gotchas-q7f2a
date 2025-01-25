@@ -1,0 +1,7 @@
+The CSS property `calc()` is used to perform calculations within CSS. However, when dealing with percentages within `calc()`, you might encounter unexpected behavior if you are not careful.
+
+For example, let's say you have a div with width 50% and you want to add 10px to it using `calc()`. The expected result might seem to be 50% + 10px. However, the result might not be what you expect, particularly if the parent container has a defined width. In this case, the 50% is calculated first based on its parent's width, and then 10px is added to this resulting pixel value. This means that if the parent's width changes dynamically, the calculation will not adapt proportionately.
+
+Another uncommon issue is when using `calc()` with multiple units and operator precedence. Suppose you have `width: calc(50% - 10px);`. The subtraction will happen first, and this result (in pixels) will be subtracted from 50% of the parent container's width. The precedence of mathematical operations is important. You should use parentheses to ensure operations are in the order you desire.
+
+Lastly, `calc()` is also subject to browser compatibility. While it is widely supported, always test on different browsers.
