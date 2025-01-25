@@ -1,0 +1,5 @@
+To address the unexpected behavior of percentages in `calc()`, consider using a more predictable approach like using `vw` or `vh` units, which are relative to the viewport width and height respectively. This avoids the dependency on the parent's width.
+
+To ensure that the mathematical operations are executed correctly in `calc()`, use parentheses to control the precedence of operations. For instance, use `calc((50% - 10px) * 2)` if you want to calculate 50% minus 10px and then multiply the result by 2.
+
+To ensure cross-browser compatibility, thoroughly test your CSS in various browsers and consider using CSS variables or preprocessors to improve maintainability and ensure consistency across different browsers.
